@@ -1,0 +1,9 @@
+{
+  "name": "reachout-messaging-mvp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A consent-based SMS messaging MVP with a simple Node.js backend.",
+  "main": "server.js",
+  "scripts": { "start": "node --env-file-if-exists=.env server.js", "dev": "node --env-file-if-exists=.env --watch server.js" },
+  "engines": { "node": ">=18" }
+}

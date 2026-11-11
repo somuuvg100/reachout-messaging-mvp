@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Consent-based messaging for people and businesses." />
+  <title>ReachOut — Permission-based messaging</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top">Reach<span>Out</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#how-it-works">How it works</a>
+      <a href="#safety">Safety</a>
+      <button class="outline-button" id="open-register" type="button">Create account</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Simple, respectful messaging</p>
+        <h1>Reach people who have chosen to hear from you.</h1>
+        <p class="hero-text">Send a clear message to an opted-in contact using a verified sender. Built for customer updates, community outreach, and permission-based marketing.</p>
+        <div class="hero-actions">
+          <button class="primary-button" id="start-messaging" type="button">Start messaging</button>
+          <a class="text-link" href="#how-it-works">Learn how it works <span>→</span></a>
+        </div>
+        <div class="trust-row"><span>✓ Consent first</span><span>✓ Verified sender</span><span>✓ Easy opt-out</span></div>
+      </div>
+      <div class="hero-card" aria-label="Messaging preview">
+        <div class="card-top"><span class="status-dot"></span><span>Message preview</span><span class="lock">▣</span></div>
+        <div class="person"><div class="avatar">AR</div><div><strong>Alex Rivera</strong><small>+1 (555) 014-2288 · opted in</small></div></div>
+        <div class="message-bubble">Hi Alex, your appointment is confirmed for tomorrow at 10:00 AM.</div>
+        <div class="delivery"><span>✓ Delivered</span><span>Today, 9:42 AM</span></div>
+      </div>
+    </section>
+
+    <section class="workspace" id="messaging">
+      <div class="section-heading"><p class="eyebrow">Message center</p><h2>Simple SMS, from one place.</h2><p>Choose a verified sender, send to an opted-in contact, and keep track of your conversations.</p><div class="account-summary"><span class="balance-icon">$</span><div><strong>Demo wallet</strong><small>100 message credits available</small></div><span class="account-status">Active</span></div></div>
+      <div class="messaging-panel">
+        <div class="tabs" role="tablist" aria-label="Messaging tools"><button class="tab active" id="send-tab" role="tab" aria-selected="true" type="button">↗ Send SMS</button><button class="tab" id="inbox-tab" role="tab" aria-selected="false" type="button">▣ Receive SMS <span class="badge">2</span></button></div>
+        <form id="message-form" class="message-form" role="tabpanel" aria-labelledby="send-tab">
+          <div class="notice"><strong>Consent required</strong><span>Only message people who have opted in. Your verified sender is shown to recipients.</span></div>
+          <label>Verified sender number
+            <select id="sender" required><option value="+1 415 555 0132">ReachOut · +1 415 555 0132</option><option value="+91 80 5555 0199">ReachOut India · +91 80 5555 0199</option></select>
+          </label>
+          <label>Recipient mobile number
+            <div class="phone-row"><select id="country" aria-label="Recipient country code" required><option value="+1">+1</option><option value="+44">+44</option><option value="+91">+91</option><option value="+61">+61</option><option value="+65">+65</option></select><input id="phone" type="tel" placeholder="555 014 2288" autocomplete="tel" required /></div>
+          </label>
+          <label>Message <span class="label-note">SMS limit: 160 characters</span>
+            <textarea id="message" maxlength="160" placeholder="Write a helpful message..." required></textarea><span class="character-count" id="character-count">0 / 160</span>
+          </label>
+          <label class="checkbox"><input id="consent" type="checkbox" required /> <span>I confirm this recipient has opted in to receive messages from me and can opt out at any time.</span></label>
+          <button class="primary-button full-width" id="send-button" type="submit">Send demo message <span>→</span></button><p class="form-note" id="send-note">Demo only — no SMS is sent from this webpage.</p><div class="form-result" id="form-result" role="status" aria-live="polite"></div>
+        </form>
+        <div id="inbox-panel" class="inbox-panel hidden" role="tabpanel" aria-labelledby="inbox-tab"><div class="inbox-header"><div><h3>Reply inbox</h3><p>Replies to your verified numbers appear here.</p></div><button class="outline-button" id="refresh-inbox" type="button">Refresh</button></div><article class="inbox-message"><div class="avatar small-avatar">AR</div><div><strong>Alex Rivera</strong><small>To +1 415 555 0132 · Today, 9:46 AM</small><p>Thanks, that time works for me.</p></div></article><article class="inbox-message"><div class="avatar small-avatar">JM</div><div><strong>Jordan Miller</strong><small>To +1 415 555 0132 · Yesterday, 4:20 PM</small><p>STOP</p></div></article><p class="inbox-note">A STOP reply must always suppress future messages to that contact.</p></div>
+        <div class="history"><strong>Recent activity</strong><span id="history-empty">No messages sent in this demo session.</span><div id="history-list"></div></div>
+      </div>
+    </section>
+
+    <section class="how-section" id="how-it-works"><div class="section-heading centered"><p class="eyebrow">How it works</p><h2>Clear communication in three steps</h2></div><div class="steps"><article><span class="step-number">01</span><h3>Create your account</h3><p>Register with your email and verify your identity before sending.</p></article><article><span class="step-number">02</span><h3>Add an opted-in contact</h3><p>Choose a country, enter a number, and confirm permission to contact them.</p></article><article><span class="step-number">03</span><h3>Write and send</h3><p>Send useful updates from your verified number with an easy opt-out.</p></article></div></section>
+    <section class="safety-section" id="safety"><div><p class="eyebrow">Built responsibly</p><h2>Respect is part of the product.</h2><p>ReachOut does not bypass blocks, hide sender identity, or support unsolicited messages. A blocked contact must not be contacted through another number.</p></div><div class="safety-list"><span>✓ Consent records</span><span>✓ STOP opt-out support</span><span>✓ Abuse reporting</span><span>✓ Rate limits</span></div></section>
+  </main>
+
+  <div class="modal hidden" id="register-modal" role="dialog" aria-modal="true" aria-labelledby="register-title"><div class="modal-card"><button class="close-button" id="close-register" type="button" aria-label="Close">×</button><p class="eyebrow">Get started</p><h2 id="register-title">Create your account</h2><p class="modal-intro">Create an account to use the message center. Real SMS is not sent until a provider is configured.</p><form id="register-form"><label id="name-field">Full name<input id="name" type="text" placeholder="Your name" required /></label><label>Email address<input id="email" type="email" placeholder="you@example.com" required /></label><label>Password<input id="password" type="password" placeholder="At least 8 characters" minlength="8" required /></label><label class="checkbox" id="consent-field"><input type="checkbox" required /> <span>I agree to use messaging only with recipient consent.</span></label><button class="primary-button full-width" id="account-submit" type="submit">Create account</button></form><button class="text-link account-switch" id="account-switch" type="button">Already have an account? Sign in</button><p class="form-result" id="register-result" role="status"></p></div></div>
+  <footer><span>© 2026 ReachOut</span><span>Permission-based messaging for people and businesses</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
