@@ -1,8 +1,8 @@
 # ReachOut messaging MVP
 
-![ReachOut dashboard](docs/reachout-dashboard.png)
+![ReachOut homepage](docs/reachout-home.png)
 
-![ReachOut reply inbox](docs/reachout-inbox.png)
+![ReachOut message center](docs/reachout-message-center.png)
 
 ReachOut is a small consent-based SMS messaging MVP built with plain HTML, CSS, JavaScript, and Node.js. It provides registration, a local persistent store, verified sender selection, consent checks, a 160-character message limit, demo delivery status, message history, inbox display, and opt-out protection.
 
